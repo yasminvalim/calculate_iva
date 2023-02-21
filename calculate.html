@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Calculate</title>
+  </head>
+  <body>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" />
+
+    <label for="pvp">Preço de venda ao Público</label>
+    <input type="number" id="pvp" name="pvp" />
+
+    <label for="iva">IVA</label>
+    <select id="iva">
+      <option value="option1">6%</option>
+      <option value="option2">13%</option>
+      <option value="option3">23%</option>
+    </select>
+
+    <label for="qnt">Quantidade</label>
+    <input type="number" id="qnt" name="qnt" />
+
+    <input type="submit" value="Submit" id="btn" />
+    <div id="container"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script>
+      function getData() {
+        $("#btn").click(function () {
+          var name = $("#name").val();
+          var pvp = $("#pvp").val();
+          var iva = $("#iva option:selected").text();
+          var qnt = $("#qnt").val();
+
+          //var message = `${name} ${pvp} ${iva} ${qnt}`;
+
+          // $("#container").append("lalala");
+        });
+      }
+      console.log(name, pvp, iva, qnt);
+    </script>
+  </body>
+</html>
